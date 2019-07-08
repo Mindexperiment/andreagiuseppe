@@ -7,6 +7,8 @@
   <!-- CSRF Token -->
   <meta name="csrf-token" content="{{ csrf_token() }}" />
 
+  <link href="https://andreagiuseppe.com" rel="canonical" />
+
   <!-- Stylesheets -->
   <link rel="stylesheet" href="{{ asset( 'css/app.css' ) }}" />
   @stack( 'stylesheets' )
