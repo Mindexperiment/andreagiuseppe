@@ -36,4 +36,16 @@ class User extends Authenticatable {
  protected $casts = [
   'email_verified_at' => 'datetime',
  ];
+
+
+ // - relations
+
+ /**
+  * A user may have many articles
+  *
+  * @return \Illuminate\Database\Eloquent\Relations\HasMany
+  */
+ public function articles() {
+  return $this->hasMany( Article::class, 'user_id' );
+ }
 }
