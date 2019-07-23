@@ -5,9 +5,11 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
+use App\Traits\Publishable;
+
 class Article extends Model {
 
- use SoftDeletes;
+ use SoftDeletes, Publishable;
 
  /**
   * The table associated with the model.
