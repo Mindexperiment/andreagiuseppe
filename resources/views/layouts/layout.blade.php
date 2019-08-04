@@ -7,6 +7,8 @@
   <!-- CSRF Token -->
   <meta name="csrf-token" content="{{ csrf_token() }}" />
 
+  <link href="https://andreagiuseppe.com" rel="canonical" />
+
   <!-- Stylesheets -->
   <link rel="stylesheet" href="{{ asset( 'css/app.css' ) }}" />
   @stack( 'stylesheets' )
@@ -14,6 +16,12 @@
   <!-- Javascript -->
   <script src="{{ asset( 'js/app.js' ) }}" defer></script>
   @stack( 'scripts' )
+
+ <!-- Global site tag (gtag.js) - Google Analytics -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136952063-1"></script>
+ <script>
+  window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-136952063-1');
+ </script>
 
   <title>{{ config( 'app.name' ) }}{{ isset( $title ) ? " | {$title}" : '' }}</title>
  </head>
