@@ -1,3 +1,9 @@
 <header>
- <div>{{ config( 'app.name' ) }}</div>
+ <div>
+  <div><a href="{{ route( 'website.homepage' ) }}">{{ config( 'app.name' ) }}</a></div>
+
+  <div>
+   <span><a href="{{ route( 'articles.speeches' ) }}">{{ __( 'Articoli' ) }}</a></span>
+  </div>
+ </div>
 </header>
