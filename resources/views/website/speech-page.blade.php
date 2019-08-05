@@ -14,3 +14,8 @@
 </section>
 
 @endsection
+
+@push( 'metadata' )
+ @include( 'layouts.metadata', [ 'title'=>$article->title ] )
+
+@endpush
