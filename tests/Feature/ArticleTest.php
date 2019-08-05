@@ -56,4 +56,16 @@ class ArticleTest extends TestCase {
 
   $this->assertFalse( Article::first()->isPublished() );
  }
+
+ public function test_Article_CanBeEdited_HasArticle() {
+  $user = factory( User::class )->create();
+  $this->actingAs( $user );
+  $article = factory( Article::class )->create();
+
+  $data = $article->toArray();
+  $data['title'] = "un nuovo titolo";
+  $response = $this->patch( route( 'articles.update', $article ), $data );
+
+  $this->assertDatabaseHas( 'articles', [ 'title'=>$data['title'] ] );
+ }
 }
