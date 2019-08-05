@@ -9,6 +9,9 @@
 
   <link href="https://andreagiuseppe.com" rel="canonical" />
 
+  <!-- Metadata -->
+  @stack( 'metadata' )
+
   <!-- Stylesheets -->
   <link rel="stylesheet" href="{{ asset( 'css/app.css' ) }}" />
   @stack( 'stylesheets' )
