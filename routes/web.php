@@ -15,6 +15,8 @@ Auth::routes();
 
 // Website
 Route::get( '/', 'WebsiteController@homepage' )->name( 'website.homepage' );
+Route::get( '/speeches', 'WebsiteController@speeches' )->name( 'website.speeches' );
+Route::get( '/speeches/{article}', 'WebsiteController@speech' )->name( 'website.speech' );
 
 // Account
 Route::get( '/account', 'AccountController@index' )->name( 'account.index' );
