@@ -10,18 +10,22 @@ trait Publishable {
   * Publish the model
   */
  public function publish() {
-  return $this->update( [
+  $this->update( [
    'published_at' => $this->freshTimestamp()
   ] );
+
+  return $this;
  }
 
  /**
   * Unpublish the model
   */
  public function unpublish() {
-  return $this->update( [
+  $this->update( [
    'published_at' => null
   ] );
+
+  return $this;
  }
 
 
