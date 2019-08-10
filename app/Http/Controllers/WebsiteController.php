@@ -11,7 +11,7 @@ class WebsiteController extends Controller {
  }
 
  public function speeches() {
-  $articles = Article::all();
+  $articles = Article::published()->get();
 
   return view( 'layouts.wrapper', [ 'page'=>'website.speeches-page' ] )
    ->with( 'articles', $articles );
