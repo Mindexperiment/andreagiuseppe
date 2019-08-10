@@ -18,6 +18,12 @@
  font-weight: bold;
  src: url(../resources/fonts/TiemposTextWeb-Bold.woff2) format('woff2');
 }
+@font-face {
+ font-family: 'EncodeSans';
+ font-style: regular;
+ font-weight: 400;
+ src: url(../resources/fonts/EncodeSans-Black.ttf) format('trutype');
+}
 
 // - tailwind
 
