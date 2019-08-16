@@ -48,6 +48,10 @@
 // - syntax highlight
 @import "ft-syntax-highlight";
 
+.constrain {
+ max-width: 42em;
+}
+
 // - markdown
 .markdown {
  @apply font-serif font-normal;
