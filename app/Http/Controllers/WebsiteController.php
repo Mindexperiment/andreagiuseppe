@@ -10,15 +10,15 @@ class WebsiteController extends Controller {
   return view( 'website.homepage' );
  }
 
- public function speeches() {
+ public function articoli() {
   $articles = Article::published()->get();
 
-  return view( 'layouts.wrapper', [ 'page'=>'website.speeches-page' ] )
+  return view( 'layouts.wrapper', [ 'page'=>'website.articoli-page' ] )
    ->with( 'articles', $articles );
  }
 
- public function speech( Article $article ) {
-  return view( 'layouts.wrapper', [ 'page'=>'website.speech-page' ] )
+ public function articolo( Article $article ) {
+  return view( 'layouts.wrapper', [ 'page'=>'website.articolo-page' ] )
    ->with( 'article', $article );
  }
 }
