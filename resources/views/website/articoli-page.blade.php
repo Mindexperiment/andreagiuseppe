@@ -12,7 +12,7 @@
   @forelse( $articles as $article )
    <div>
     <p>
-     <a href="{{ route( 'website.speech', $article ) }}">{{ $article->title }}</a>
+     <a href="{{ route( 'website.articolo', $article ) }}">{{ $article->title }}</a>
      <span>{{ $article->updated_at->diffForHumans() }}</span>
     </p>
    </div>
