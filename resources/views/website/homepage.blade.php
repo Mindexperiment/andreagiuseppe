@@ -1,16 +1,37 @@
 @extends( 'layouts.layout' )
 
 @section( 'body' )
- @include( 'layouts.header' )
+<div class="mt-20 sm:flex sm:justify-center sm:justify-start">
+ <div class="relative w-full sm:w-1/2 h-32 p-6 text-center sm:text-right">
+  <div class="mars"></div>
+ </div>
 
- <p>Ciao, sono Andrea (<a href="https://twitter.com/andrea_gius" target="_blank">@andrea_gius</a>). Sono uno sviluppatore Full-Stack e Consulente per la pianificazione di Web App moderne, innovative e scalabili.</p>
+ <div class="w-full sm:w-1/2 p-6">
+  <span class="inline-block w-10">
+   @include( 'svg.spacehead' )
 
- <p>Sto sviluppando <a href="https://kaleskop.com" target="_blank">Kaleskop</a> un'applicazione, a livello Europeo, che ti permette di pubblicizzare i tuoi prodotti e servizi in modi che non hai mai visto prima.</p>
+  </span>
 
- <p>Condivido tutto quello che conosco sullo sviluppo di applicazioni straordinarie nella sezione <a href="{{ route( 'website.speeches' ) }}">Articoli</a>.</p>
+  <h1 class="font-black font-brand text-5xl">
+   <span class="block">Andrea</span>
+   <span class="block">Giuseppe</span>
+  </h1>
 
- <p><a href="mailto:info@andreagiuseppe.com">info{at}andreagiuseppe.com</a> - <a href="tel:+393920460819">+39 392 0460819</a></p>
+  <p class="py-2"><a href="https://twitter.com/andrea_gius" target="_blank" class="text-agp-red">@andrea_gius</a></p>
 
- @include( 'layouts.footer' )
+  <p class="py-1 text-agp-red">
+   <a href="tel:+393920460819" class="flex items-center">
+    <span class="w-10 mr-2">
+     @include( 'svg.phone' )
+    </span>
+  
+    {{ __( 'Call Me' ) }}
+   </a>
+  </p>
+
+  <p class="py-2 font-thin text-xl">{{ __( 'Interstellar Full-Stack Web Developer' ) }}</p>
+
+ </div>
+</div>
 
 @endsection
