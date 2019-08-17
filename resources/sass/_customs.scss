@@ -1,0 +1,81 @@
+// - planets
+.mars {
+ background-color: #C25447;
+ border-radius: 100%;
+ box-shadow: inset -3px -3px #ae4033;
+ height: 42px;
+ left: 70%;
+ position: absolute;
+ top: 50%;
+ width: 42px;
+
+ animation: marsJump 2.89s -3.1s linear infinite;
+ -webkit-animation: marsJump 2.89s -3.1s linear infinite;
+ -moz-animation: marsJump 2.89s -3.1s linear infinite;
+ -ms-animation: marsJump 2.89s -3.1s linear infinite;
+ -o-animation: marsJump 2.89s -3.1s linear infinite;
+
+ &::before {
+  background-color: #ae4033;
+  border-radius: 100%;
+  content: '';
+  height: 12px;
+  left: 20px;
+  position: absolute;
+  top: 23px;
+  width: 12px;
+ }
+
+ &::after {
+  background-color: #ae4033;
+  border-radius: 100%;
+  content: '';
+  height: 9px;
+  left: 5px;
+  position: absolute;
+  top: 10px;
+  width: 9px;
+ }
+}
+
+@keyframes marsJump {
+ 0% { top: 45px; }
+ 30% { top: 37px; }
+ 70% { top: 53px; }
+ 100% { top: 45px; }
+}
+
+// - syntax highlight
+@import "ft-syntax-highlight";
+
+.constrain {
+ max-width: 42em;
+}
+
+// - markdown
+.markdown {
+ @apply font-serif font-normal;
+}
+.markdown p {
+ @apply mt-6 font-normal leading-normal;
+}
+.markdown strong {
+ @apply font-semibold text-agp-yellow;
+}
+.markdown a {
+ @apply italic underline text-agp-red
+}
+.markdown h1,
+.markdown h2 {
+ @apply mb-4 font-semibold text-3xl;
+}
+.markdown h3,
+.markdown h4 {
+ @apply mb-2 mt-4 font-medium text-2xl;
+}
+.markdown h5 {
+ @apply mb-2 italic font-thin text-xl;
+}
+.markdown h6 {
+ @apply mb-2 font-semibold;
+}
